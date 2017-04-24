@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src="/interact.js">
+</script>
+
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: green;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 200px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 200px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+   <h1>Dave's HTML Demo</h1>
+</header>
+  
+<nav>
+<h3>Links</h3>
+  <ul>
+    <li><a href="http://www.christinafriedle.com/">ChristinaFriedle.com</a></li>
+    <li><a href="https://www.w3schools.com/default.asp">w3schools.com</a></li>
+  <br>
+  <h3>Topics</h3>
+    <li><a href="#embed">Embedding Content</a></li>
+    <li><a href="#areamap">Image Area Map</a></li>
+    <li><a href="#email">Send comment to Dave</a></li>
+  </ul>
+</nav>
+
+<article id="embed">
+
+<!--Replace img with iframe: 
+<iframe src="https://www.google.com/maps/d/u/1/embed?mid=1Fs2EHJWz2EGN-96VfY9v0fGQ_LQ" width="640" height="480" style="float:right;></iframe>
+-->
+  <img src="googlestill.jpg" width="640" height="480" style="float:right;"></img>   
+  <p>Here is my first Google My Map, created at the beggining of the term.</p>
+  <p>The iframe element was used <strong>&ltiframe src="{url}" width="#" height="#" style="float:right;"&gt</strong>.</p>
+  <p>I added a position description to the embedded code <strong>(style="float:right;")</strong>.</p>
+</article>
+
+<article>
+<hr>
+<iframe src="https://beta.mapquestapi.com/staticmap/v5/map?key=lw5Vkmun8KWOZ6SGBtIbwtuP6YFGPv8D&center=Portland,OR&zoom=12&type=hyb&size=850,550" 
+style="width:850px;height:550px;float:right;"> 
+ <script>
+po.interact()
+</script>
+</iframe>
+
+</article>
+
+<!-- &size=800,500@2x -->
+
+<article>
+
+  <hr>
+  <h1 id="areamap">Using the Areamap function for interactivity.</h1>
+  <p>I have used my GEO 266 Final Project as the image.</p>
+  <p>Move the mouse over the map elements, notice how different areas of the image have different links.</p>
+
+  <img src="webpagemapfull.jpg" alt="Earthquake Suseptibility of Potland Infrustructure" usemap="#eqsuseptmap" 
+style="width:850px;height:550px;float:right;">
+  <map name="eqsuseptmap">
+    <area shape="rect" coords="20,64,430,325" alt="Methodology" href="#method">
+    <area shape="rect" coords="440,56,831,325" alt="Data Overlay" href="#overlay">
+    <area shape="rect" coords="20,335,281,525" alt="Fault Line Buffers" href="#faultline">
+    <area shape="rect" coords="290,335,556,525" alt="Reletive Age of Buildings" href="#buildings">
+    <area shape="rect" coords="565,335,830,525" alt="Reletive Age of Water Collection System" href="#pipes">
+  </map>
+
+</article>
+
+
+<article>
+  <hr>
+  <h1 id="method">Methodology</h1>
+  <p>This is were an explanation of the datasets used and analysis can be documented for further study.</p>
+
+  <img src="eqsuseptmodel.png" alt="Proccess Model" style="width:1038px;height:276px;border: 2px solid black;">
+
+</article>
+
+<article>
+  <hr>
+  <h1 id="overlay">Final Suseptibility Analysis</h1>
+  <img src="overlaymap.jpg" alt="Final Overlay" style="width:750px;height:513px;float:right;">
+  <p>This is were a meaningful explanation of the final analysis would be put.</p>
+
+</article>
+
+<article id="email">
+<hr>
+<h2>Send e-mail to david.kelly6@pcc.edu:</h2>
+
+<form action="mailto:david.kelly6@pcc.edu" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+E-mail:<br>
+<input type="text" name="mail"><br>
+Comment:<br>
+<textarea name="comment" rows="10" cols="30">Enter your message here.</textarea><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+</article>
+
+
+<footer>Copyright &copy; W3Schools.com</footer>
+
+</div>
+
+</body>
+</html>
